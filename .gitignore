@@ -5,3 +5,6 @@ frontend/.DS_Store
 docs/.DS_Store
 backend/__pycache__/
 backend/venv/
+frontend/android/
+frontend/linux/
+frontend/windows/
