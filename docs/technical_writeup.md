@@ -112,10 +112,10 @@ uvicorn main:app --reload --port 8000
   - Details load for first `fdcId`
   - Invalid `fdcId` returns user friendly error
   - Backend stopped -> app shows clear error
-- Screenshot for major flow:
-  - `assets/images/search.png`
-  - `assets/images/detail.png`
-  - `assets/images/error.png`
+- Screenshots:
+  - [Food Search](assets/images/search.png)
+  - [Nutrition Details](assets/images/detail.png)
+  - [Backend not connected](assets/images/error.png)
 
 ## 8. Challenges and Solutions
 - CORS issues solved by FastAPI middleware
