@@ -53,6 +53,9 @@ uvicorn main:app --reload --port 8000
 * ReDoc: `http://127.0.0.1:8000/redoc`
 * Health: `http://127.0.0.1:8000/health`
 
+- [Swagger UI](../assets/images/swagger.png)
+- [Swagger UI test](../assets/images/swagger_test.png)
+
 ## Endpoints
 
 ### GET /health
