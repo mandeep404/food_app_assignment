@@ -1,16 +1,78 @@
-# frontend
+## Food Info Flutter App
 
-A new Flutter project.
+A simple Flutter client that searches foods and shows key nutrients using a FastAPI backend proxy.
 
-## Getting Started
+## Project structure
 
-This project is a starting point for a Flutter application.
+```
+frontend/
+  pubspec.yaml
+  lib/
+    main.dart
+    food_provider.dart
+    search_screen.dart
+    detail_screen.dart
+```
 
-A few resources to get you started if this is your first Flutter project:
+## Prerequisites
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* Flutter SDK (latest stable)
+* A running backend on your machine, default `http://127.0.0.1:8000`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Configure the backend URL
+
+Open `lib/food_provider.dart` and set `ApiConfig.baseUrl` to match your target device.
+* Android emulator: `http://10.0.2.2:8000`
+* iOS simulator, macOS desktop, Flutter web on Chrome: `http://127.0.0.1:8000`
+* Physical device: `http://<your-computer-LAN-IP>:8000` and run the backend with `--host 0.0.0.0`
+
+## Platform notes
+
+### macOS desktop
+
+* Ensure `macos/Runner/DebugProfile.entitlements` includes:
+
+  ```xml
+  <key>com.apple.security.network.client</key><true/>
+  ```
+* If HTTP is blocked, add ATS exceptions to `macos/Runner/Info.plist` similar to iOS
+
+## Install dependencies
+
+```bash
+cd frontend
+flutter pub get
+```
+
+## Run the app
+
+Start the backend first, then:
+
+```bash
+flutter run -d macos
+# or choose your device:
+# flutter run -d ios
+# flutter run -d chrome
+# flutter run -d emulator-id
+```
+
+## App flow
+
+1. Enter a food name and search
+2. See a scrollable list of results
+3. Tap a result to open the details screen
+4. View key nutrients in a simple table
+
+## Features included
+
+* Search by food name
+* View specific nutrition information
+* Provider state management
+* Loading and error states
+
+## Versions used in development
+
+* Flutter stable channel
+* Dart stable SDK
+* Provider 6
+* http
