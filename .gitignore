@@ -1,0 +1,7 @@
+backend/.env
+.DS_Store
+backend/.DS_Store
+frontend/.DS_Store
+docs/.DS_Store
+backend/__pycache__/
+backend/venv/
