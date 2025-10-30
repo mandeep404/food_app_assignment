@@ -58,10 +58,12 @@ flutter run -d macos
 
 ## App flow
 
+- [Home page](../assets/images/home.png)
+
 1. Enter a food name and search
-2. See a scrollable list of results
-3. Tap a result to open the details screen
-4. View key nutrients in a simple table
+3. See a scrollable list of results
+4. Tap a result to open the details screen
+5. View key nutrients in a simple table
 
 ## Features included
 
@@ -69,6 +71,9 @@ flutter run -d macos
 * View specific nutrition information
 * Provider state management
 * Loading and error states
+
+- [Search Loading](../assets/images/search_load.png)
+- [Details Loading](../assets/images/detail_load.png)
 
 ## Versions used in development
 
